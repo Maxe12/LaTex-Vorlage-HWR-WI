@@ -48,6 +48,8 @@
 \usepackage[toc,page]{appendix}
 \usepackage[ngerman]{translator}
 \usepackage{listings,xcolor} %Codeanzeige
+
+%Hinzufügen von C#
 \lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
@@ -81,7 +83,8 @@
 \definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
 \definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
 \definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
- 
+
+%Hinzufügen von Java 
 \lstset{language=Java,
 basicstyle=\ttfamily,
 keywordstyle=\color{javapurple}\bfseries,
@@ -180,7 +183,7 @@ showstringspaces=false}
 % sorgt dafür, dass bei Leerzeile die Einrückung verhindert und stattdessen eine Leerzeile eingefügt wird % erspart bigskips und erhöht die Lesbarkeit im LaTeX-Text 
 \KOMAoptions{parskip=full*}
 
-\author{Maximilian Bieleke}
+\author{Maximilian Mustermann}
 
 % ändert Titelschriftart in Serifen-Normalschriftart
 \addtokomafont{disposition}{\rmfamily} 
@@ -196,7 +199,7 @@ showstringspaces=false}
 %%%%%%%%%%%% Untertitel
 \newcommand{\subtopic}{Hier Untertitel eintragen}
 %%%%%%%%%%%% Studienbereich
-\newcommand{\studienbereich}{Duales Studium Wirtschaft · Technik}
+\newcommand{\fachbereich}{Duales Studium Wirtschaft · Technik}
 %%%%%%%%%%%% Fachrichtung
 \newcommand{\fachrichtung}{Wirtschaftsinformatik}
 %%%%%%%%%%%% Betrieb
@@ -204,11 +207,9 @@ showstringspaces=false}
 %%%%%%%%%%%% Betreuer HWR
 \newcommand{\betreuerHS}{Prof. Dr. Prüfer}
 %%%%%%%%%%%% Betreuer Unternehmen
-\newcommand{\betreuerUnt}{Dein Betruer}
+\newcommand{\betreuerUnt}{Dein Betreuer}
 %%%%%%%%%%%% Jahrgang
 \newcommand{\jahrgang}{2018}
-%%%%%%%%%%%% Modul
-\newcommand{\modul}{Dein Modul}
 %%%%%%%%%%%% Semester
 \newcommand{\semester}{3}
 
@@ -223,5 +224,12 @@ showstringspaces=false}
 \input{tex/00_titelseite.tex}
 
 \onehalfspacing % anderthalbfacher Zeilenabstand
+
+%Die ersten Kapitel werden Römisch numeriert und werden (in diesem Beispiel)
+%nicht mit ins Inhaltsverzeichnis aufgenommen
+\pagenumbering{Roman}
+
+%Abstract (Optional für PTB etc.)
+\input{tex/01_abstract.tex} 
 
 \end{document}
