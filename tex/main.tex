@@ -196,6 +196,13 @@ showstringspaces=false}
 %Unterbindet den schwarzen unterstrich
 \renewcommand{\headrulewidth}{0pt}
 }
+%so überschreibt es auch die anderen settings (keine ahnung wieso das so ist...)
+\lhead{\includegraphics[scale=1]{assets/images/HWR_Logo_farbig.jpg}}
+\chead{\thepage}
+\rhead{\includegraphics[scale=0.05]{assets/images/DB_Logo.png}}
+\cfoot{} %so wird verhindert, dass die Seitenanzahl auch unten angezeigt wird
+%Unterbindet den schwarzen unterstrich
+\renewcommand{\headrulewidth}{0pt}
 
 \author{Maximilian Mustermann}
 
@@ -274,5 +281,8 @@ showstringspaces=false}
 
 % Einleitung
 \input{tex/02_einleitung.tex}
+
+%Hauptteil
+\input{tex/03_hauptteil.tex}
 
 \end{document}
