@@ -183,6 +183,20 @@ showstringspaces=false}
 % sorgt dafür, dass bei Leerzeile die Einrückung verhindert und stattdessen eine Leerzeile eingefügt wird % erspart bigskips und erhöht die Lesbarkeit im LaTeX-Text 
 \KOMAoptions{parskip=full*}
 
+%Kopf und Fußzeile bearbeiten
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+%Kopfzeile
+\lhead{\includegraphics[scale=1]{assets/images/HWR_Logo_farbig.jpg}}
+\chead{\thepage}
+\rhead{\includegraphics[scale=0.05]{assets/images/DB_Logo.png}}
+%Unterbindet den schwarzen unterstrich
+\renewcommand{\headrulewidth}{0pt}
+}
+
 \author{Maximilian Mustermann}
 
 % ändert Titelschriftart in Serifen-Normalschriftart
@@ -230,30 +244,30 @@ showstringspaces=false}
 \pagenumbering{Roman}
 
 %Abstract (Optional für PTB etc.)
-\input{tex/01_abstract.tex} 
+\input{tex/01_abstract.tex}
+\addcontentsline{toc}{chapter}{Abstract}
 
 %Inhaltsverzeichnis 
 \tableofcontents{}
-%Abstract Inhaltsverzeichnis etc. lassen sich mittels befehl
-%\addcontentsline{toc}{chapter}{Abstract}
-%Ins inhaltsverzeichnis hinzufügen
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+
 \clearpage
 
 \deftranslation[to=German]{Glossary}{Glossar}
-\deftranslation[to=German]{Acronyms}{Abkürzungen}
+\deftranslation[to=German]{Acronyms}{Akronyme}
 \printnoidxglossaries
 
 \clearpage
 
 %%%%Abbildungsverzeichnis(If needed)
 
-%\listoffigures
-%\newpage
+\listoffigures
+\newpage
 
 %%%%Tabellenverzeichnis(If needed)
 
-%\listoftables
-%\newpage
+\listoftables
+\newpage
 
 %Arabische Nummrierung 
 \pagenumbering{arabic}
