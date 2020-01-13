@@ -232,4 +232,33 @@ showstringspaces=false}
 %Abstract (Optional für PTB etc.)
 \input{tex/01_abstract.tex} 
 
+%Inhaltsverzeichnis 
+\tableofcontents{}
+%Abstract Inhaltsverzeichnis etc. lassen sich mittels befehl
+%\addcontentsline{toc}{chapter}{Abstract}
+%Ins inhaltsverzeichnis hinzufügen
+\clearpage
+
+\deftranslation[to=German]{Glossary}{Glossar}
+\deftranslation[to=German]{Acronyms}{Abkürzungen}
+\printnoidxglossaries
+
+\clearpage
+
+%%%%Abbildungsverzeichnis(If needed)
+
+%\listoffigures
+%\newpage
+
+%%%%Tabellenverzeichnis(If needed)
+
+%\listoftables
+%\newpage
+
+%Arabische Nummrierung 
+\pagenumbering{arabic}
+
+% Einleitung
+\input{tex/02_einleitung.tex}
+
 \end{document}
