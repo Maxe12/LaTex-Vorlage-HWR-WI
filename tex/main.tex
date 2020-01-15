@@ -36,6 +36,7 @@
 \usepackage{fontenc}
 \usepackage{graphicx}
 \usepackage{cite} %Quellenangaben
+\usepackage{apacite} %APA Citation für Literaturverzeichnis
 \usepackage{setspace} % Zeilenabstand
 \usepackage[ 
    colorlinks,        % Links ohne Umrandungen in zu wählender Farbe 
@@ -284,5 +285,19 @@ showstringspaces=false}
 
 %Hauptteil
 \input{tex/03_hauptteil.tex}
+
+%Schluss
+\input{tex/04_schluss.tex}
+
+%Literaturverzeichnis
+\renewcommand{\refname}{Literaturverzeichnis}%Überschrift vom Literaturverzeichis ändern
+\addtocontents{toc}{\protect\vspace*{\baselineskip}}
+\nocite{*}
+\bibliographystyle{apacite}
+\bibliography{assets/literature/sources}
+\newpage
+
+%Anhang
+
 
 \end{document}
