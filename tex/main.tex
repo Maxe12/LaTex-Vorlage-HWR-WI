@@ -241,6 +241,9 @@ showstringspaces=false}
 \input{tex/glossar.tex}
 \makenoidxglossaries
 
+%init counter
+\newcounter{originalpagenumber}
+
 %Dokument beginnt hier 
 \begin{document}
 
@@ -279,6 +282,8 @@ showstringspaces=false}
 \listoftables
 \newpage
 
+\setcounter{originalpagenumber}{\number\value{page}}
+\setcounter{page}{0}
 %Arabische Nummrierung 
 \pagenumbering{arabic}
 
@@ -291,6 +296,8 @@ showstringspaces=false}
 %Schluss
 \input{tex/04_schluss.tex}
 
+\pagenumbering{Roman}
+\setcounter{page}{\number\value{originalpagenumber}}
 %Literaturverzeichnis
 \addtocontents{toc}{\protect\vspace*{\baselineskip}}
 \nocite{*}
