@@ -256,13 +256,8 @@ showstringspaces=false}
 
 \onehalfspacing % anderthalbfacher Zeilenabstand
 
-%Abstract (Optional für PTB etc.)
-\input{tex/01_abstract.tex}
-\addcontentsline{toc}{chapter}{Abstract}
-
 %Inhaltsverzeichnis 
 \tableofcontents{}
-\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
 
 \clearpage
 
@@ -288,13 +283,13 @@ showstringspaces=false}
 \pagenumbering{arabic}
 
 % Einleitung
-\input{tex/02_einleitung.tex}
+\input{tex/01_einleitung.tex}
 
 %Hauptteil
-\input{tex/03_hauptteil.tex}
+\input{tex/02_hauptteil.tex}
 
 %Schluss
-\input{tex/04_schluss.tex}
+\input{tex/03_schluss.tex}
 
 \pagenumbering{Roman}
 \setcounter{page}{\number\value{originalpagenumber}}
@@ -308,9 +303,9 @@ showstringspaces=false}
 \newpage
 
 %Anhang
-\input{tex/05_anhang.tex}
+\input{tex/04_anhang.tex}
 
 %Ehrenwörtlich erklährung 
-\input{tex/06_ehrenwoertlicheerklaerung.tex}
+\input{tex/05_ehrenwoertlicheerklaerung.tex}
 
 \end{document}
