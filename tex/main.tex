@@ -10,7 +10,7 @@
 	12pt, %Schriftgröße
 	a4paper,
 	liststotoc, %Inhaltsverzeichniseinträge für Listen (z.B. Abbildungen)
-	bibtotoc, %Inhaltsverzeichniseinträge f+r Quellen
+	bibtotoc,%Inhaltsverzeichniseinträge f+r Quellen 
 	pointlessnumbers, %Entfernt Punkt hinter Gliederungsnummern
 	ngerman, %Sprachpaket
 	headsepline, %Headertrennlinie
@@ -36,7 +36,7 @@
 \usepackage{fontenc}
 \usepackage{graphicx}
 \usepackage{cite} %Quellenangaben
-\usepackage{apacite} %APA Citation für Literaturverzeichnis
+
 \usepackage{setspace} % Zeilenabstand
 \usepackage[ 
    colorlinks,        % Links ohne Umrandungen in zu wählender Farbe 
@@ -50,6 +50,7 @@
 %\usepackage[titletoc]{appendix}
 \usepackage[ngerman]{translator}
 \usepackage{listings,xcolor} %Codeanzeige
+%\usepackage[nottoc,numbib]{tocbibind}
 
 %Hinzufügen von C#
 \lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
@@ -291,11 +292,11 @@ showstringspaces=false}
 \input{tex/04_schluss.tex}
 
 %Literaturverzeichnis
-\renewcommand{\refname}{Literaturverzeichnis}%Überschrift vom Literaturverzeichis ändern
 \addtocontents{toc}{\protect\vspace*{\baselineskip}}
 \nocite{*}
-\bibliographystyle{apacite}
+\bibliographystyle{apalike}
 \bibliography{assets/literature/sources}
+
 \newpage
 
 %Anhang
