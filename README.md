@@ -33,3 +33,9 @@ Unter %hier wieder Römisch
 
     \endgroup
 
+2. Sollten einzelne Kapitel zu früh einen Linebreak erzeugen (ein Wort ist in der nächsten Zeile) 
+   kann folgendes gemacht werden:
+
+`\chapter[title with long text]{title with long \rlap{text}}`
+
+
