@@ -7,7 +7,17 @@ Zum Benutzen der Vorlage:
 2. Beispielkapitel (Einleitung, Hauptteil, Schluss) löschen (und deren input tag in der main.tex)
 3. Losschreiben
 
-Optionale einstellungen für das Dokument:
+# Ausstehende Änderungen bzgl. Layout
+
+Die Vorlage muss an einigen Parts noch angepasst werden, so muss die Römische Nummerierung nur für die Anfänglichen Kapitel bis zur ersten Textseite eingerichtet werden.
+hierfür muss der counter in der main.tex rausgenommen werden 
+
+Unter %hier wieder Römisch
+
+  ~~\pagenumbering{Roman} <br>
+  \setcounter{page}{\number\value{originalpagenumber}}~~
+
+# Optionale einstellungen für das Dokument:
 1. Möchte man den Seitenumbruch bei neuen Kapiteln verhindern muss eine Group um die eingefügten Kapitel erstellt werden, 
   für die man keine automatischen Umbrüche möchte. Dies kann dann wie folgt aussehen:  
     
